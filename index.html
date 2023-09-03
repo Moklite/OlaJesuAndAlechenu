@@ -464,23 +464,25 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
-
-    // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate()
-    });
-
-    //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
-    });
-</script>
+		// Calculate the target date: September 11, 2023
+		var targetDate = new Date('2023-09-11T00:00:00');
+	
+		// Default example
+		simplyCountdown('.simply-countdown-one', {
+			year: targetDate.getFullYear(),
+			month: targetDate.getMonth() + 1, // JavaScript months are zero-based
+			day: targetDate.getDate()
+		});
+	
+		// jQuery example
+		$('#simply-countdown-losange').simplyCountdown({
+			year: targetDate.getFullYear(),
+			month: targetDate.getMonth() + 1,
+			day: targetDate.getDate(),
+			enableUtc: false
+		});
+	</script>
+	
 
 	</body>
 </html>
